@@ -1,0 +1,175 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Righteous);
+
+/*  Reset CSS  */
+* { margin:0;  padding:0;}
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none; color:#555; }
+img { border:0;}
+body {font-family: 'Noto Sans KR', sans-serif; color: #333;}
+.hidden{overflow: hidden; position: absolute; left:-9999px;}
+
+/* #wrap{padding: 0 150px 0 50px;} */
+
+/*로고*/
+h1 {position:fixed; top:30%; left:50px; z-index:10; color: #61a5e0;}
+
+/*메뉴*/
+#menu { position:fixed; top:50%; left:0px; margin-top:-100px; z-index:13;}
+#menu a { display:block; width:150px; height:60px;
+font-size:18px; color:#333; text-align:right; overflow:hidden; 
+box-sizing:border-box;  border-top:1px solid #61a5e0;  
+opacity:0.8; transition:all 0.5s;}
+#menu li:hover a {font-size:24px;  opacity:1; color: #61a5e0;}
+#menu li.on a {font-size:24px; opacity:1; color: #61a5e0;}
+
+/*레이아웃*/
+section {width:90%; position:relative; background-size:cover;
+overflow:hidden; margin: 0 auto}
+
+/* home영역 */
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+
+#container {
+  text-align: center;
+  color: #61a5e0;
+  font-size:50px;
+  font-weight:400;
+  padding-top:200px;  
+  position:absolute;
+  width:100%;
+  bottom:45%;
+  display:block;
+}
+
+.text{font-weight: 500;}
+
+#flip {
+  /* height:50px; */
+  height:80px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  /* height:45px; */
+  height:85px;
+  /* margin-bottom:45px; */
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 4s linear infinite;
+}
+
+#flip div div {
+  background:#4094dd;
+}
+#flip div:first-child div {
+  background:#0074da; 
+}
+#flip div:last-child div {
+  background:#61a5e0;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+.home{background: url('../images/Rect\ Light.svg') no-repeat bottom;
+width: 100%; height: 100%; background-size: 100%;}
+
+
+
+
+
+/* profile영역 */
+.profile{overflow: hidden;}
+.pf_left{float: left; width: 50%; position: relative; top:50%;
+box-sizing: border-box; padding-left: 100px;
+transform: translateY(-50%)}
+.pf_left div{text-align: center;}
+.pf_left img{width: 60%;}
+.pf_left strong{display: block; font-size: 30px; font-weight: 500;}
+.pf_left p{font-size: 20px; font-weight: 500; margin: 5px 0 25px 0; color: #666;}
+.pf_left ul{display: flex; justify-content: center; gap: 10px;}
+.pf_left ul a{border: 1px solid #61a5e0; color: #61a5e0; padding: 10px;
+transition: all .5s ease;}
+.pf_left ul a:hover{background: #61a5e0; color: #fff;}
+
+.pf_right{position: absolute; top:50%; width: 50%; right: 0;
+transform: translateY(-50%);}
+.pf_right>ul>li{border-bottom: 1px solid #61a5e0; padding-bottom: 20px;}
+.pf_right>ul>li:last-of-type{border: 0;}
+.pf_right dl dt{font-size: 20px; font-weight: 500; margin: 10px 0 10px 0;}
+.pf_right dl dd{font-size: 20px; font-weight: 400; color: #666;}
+.pf_right>ul>li span{display: block; font-size: 20px; font-weight: 500; 
+margin: 10px 0 10px 0;}
+.pf_right .skill{display: grid; grid-template-columns: repeat(11, 0.5fr);
+grid-gap:0.5vw}
+.pf_right .skill li{text-align: center; width: 3vw;}
+.pf_right .skill li img{width: 100%;}
+.pf_right .skill span{font-size: 0.6vw;}
+
+/* desktop영역 */
+.desktop, .mobile, .responsive, .wordpress{overflow: hidden;}
+.dk_pic, .mb_pic, .rp_pic, .wp_pic{float: left; width: 50%;
+transform: translateY(-50%); position: relative; top:50%;
+box-sizing: border-box; margin-left: 100px;}
+.dkpic1, .mbpic1, .rppic1, .wppic1{position: relative; top:0;
+width: 70%; margin: 0 auto; z-index: 1;}
+.dk_pic img, .mb_pic img, .rp_pic img, .wp_pic img{width: 100%;}
+.dkpic2, .mbpic2, .rppic2, .wppic2{position: absolute; top:4%; left: 50%;
+width: 60%; transform: translateX(-50%);}
+
+.dk_info, .mb_info, .rp_info, .wp_info{position: absolute; width: 50%; 
+right: -5%; transform: translateY(-50%); top:50%;}
+.dk_info strong, .mb_info strong ,.rp_info strong, .wp_info strong{
+font-size: 50px; font-weight: 500; display: block;}
+.dk_info span, .mb_info span, .rp_info span, .wp_info span{
+font-size: 20px; font-weight: 500; color: #61a5e0;}
+.dk_info ul, .mb_info ul, .rp_info ul, .wp_info ul{
+border-top: 1px solid #61a5e0; margin: 10px 0 20px 0;}
+.dk_info ul li, .mb_info ul li, .rp_info ul li, .wp_info ul li{
+font-size: 20px; font-weight: 400; margin-top: 10px;}
+.dk_info a, .mb_info a, .rp_info a, .wp_info a{border: 1px solid #61a5e0;
+padding: 10px; color: #61a5e0; display: block; width: 100px;
+text-align: center; transition: all .5s ease;}
+.dk_info a:hover, .mb_info a:hover, .rp_info a:hover, .wp_info a:hover{
+background: #61a5e0; color: #fff;}
+.mb_info dl, .rp_info dl, .wp_info dl{margin-top: 20px;
+width: 60%;}
+.dk_info dl{width: 80%; margin-top: 20px;}
+.dk_info dt, .mb_info dt, .rp_info dt, .wp_info dt{
+font-size: 20px; font-weight: 500; margin-bottom: 10px;}
+.dk_info dd, .mb_info dd, .rp_info dd, .wp_info dd{
+font-size: 18px; font-weight: 400; color: #666;}
+.dk_info img, .mb_info img, .rp_info img, .wp_info img{position: absolute;
+bottom:0; right: 8%}
+
+/* mobile영역 */
+.mbpic1{width: 50%;}
+.mbpic2{width: 31%;}
+.mb_info ul li{ line-height: 2em;}
+
+
+/* responsive영역 */
+.rppic1{position: relative;}
+.rppic1::before{content: ''; display: block; background: url(../images/responsive2.png) no-repeat left bottom;
+background-size: 30%; position: absolute; left: 0; top:0; z-index: 100;
+width: 100%; height: 100%;} 
+
+/* wordpress영역 */
+.wppic1{position: relative;}
+.wppic1::before{content: ''; display: block; background: url(../images/wordpress2.png) no-repeat left bottom;
+background-size: 30%; position: absolute; left: 0; top:0; z-index: 100;
+width: 100%; height: 100%;} 
